@@ -1,0 +1,20 @@
+-->|	bad_loop (~badloop@linkki.kuva.fi) has joined #buzz
+	cyanpjh[	describevalue is like an event and an event only, i dont know if you can force the parameter window to refresh itself
+	intoxicat	ah
+	cyanpjh[	since its describevalue and not describeparam try using the command to change thing
+	cyanpjh[	changeparameter or whatever it is
+	cyanpjh[	try like changing it, without changing it
+	intoxicat	ah DescibeParam must be my friend...
+	cyanpjh[	describeparam describes the left side of the parameter bar
+
+
+
+intoxicat	i jsut really want to change a range from FFFE - 0 to 0 to FFFE
+	intoxicat	maybe it would be easier just to have both showing on the right side..
+	cyanpjh[	well you can use describevalue as is
+	|<--	DemenSeed has left efnet.demon.co.uk (Ping timeout: 265 seconds)
+	cyanpjh[	but use changeparameter to set the parameter to its current value (which shouldnt actually change it).. make sure it doesnt cause a loop in the Tick function tho
+	cyanpjh[	changeparameter forces a refresh of that parameter's value in the window
+	cyanpjh[	you might even get away with sending NOVALUE through changeparameter and it would do nothing, but refresh, but i havent tested that
+
+
